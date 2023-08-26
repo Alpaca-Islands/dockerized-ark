@@ -27,9 +27,7 @@ RUN Remove-Item C:/rcon/rcon-0.10.3-win64.zip
 #endregion rcon
 
 # Env vars
-
-# Ports
-
+ENV VALIDATE true
 
 ENV QUERY_PORT      28016
 ENV GAME_PORT       8888

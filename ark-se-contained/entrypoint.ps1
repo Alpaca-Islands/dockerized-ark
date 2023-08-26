@@ -1,5 +1,3 @@
-c:\steamcmd\steamcmd.exe +force_install_dir c://arkserver +login anonymous +app_update 376030 +quit
-
 $map = $env:MAP
 $sessionName = $env:NAME
 $adminPassword = $env:ADMIN_PASSWORD
@@ -9,6 +7,22 @@ $maxPlayers = $env:MAX_PLAYERS
 $rconEnabled = $env:RCON_ENABLED
 $rconPort = $env:RCON_PORT
 $extraStartupArgs = $env:EXTRA_STARTUPARGS
+
+if ($env:VALIDATE -eq "true") {
+    # Define the SteamCMD command
+    $steamCmdCommand = "c:\steamcmd\steamcmd.exe +force_install_dir c://arkserver +login anonymous +app_update 376030 validate +quit"
+    
+    # Run the SteamCMD command
+    Invoke-Expression -Command $steamCmdCommand
+}
+else {
+    $steamCmdCommand = "c:\steamcmd\steamcmd.exe +force_install_dir c://arkserver +login anonymous +app_update 376030 +quit"
+    
+    # Run the SteamCMD command
+    Invoke-Expression -Command $steamCmdCommand
+}
+
+#c:\steamcmd\steamcmd.exe +force_install_dir c://arkserver +login anonymous +app_update 376030 validate +quit
 
 $parameters = "$($map)?listen?SessionName=`"$($sessionName)`"?ServerAdminPassword=$($adminPassword)?Port=$($gamePort)?QueryPort=$($queryPort)?MaxPlayers=$($maxPlayers)?RCONEnabled=$($rconEnabled)?RCONPort=$($rconPort)$($extraStartupArgs)"
 

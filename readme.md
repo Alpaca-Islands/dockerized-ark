@@ -61,6 +61,7 @@ This starts the container witch updates/installs ark in c://arkserver it uses th
 |`RAW_UDP_PORT`|8889 (This sohuld always be GAME_PORT + 1)|
 |`RCON_PORT`|28020|
 |`MAP`|TheIsland|
+|`VALIDATE`|true|
 |`NAME`|Dockerized ark server on Windows!|
 |`ADMIN_PASSWORD`|test|
 |`MAX_PLAYERS`|10|
