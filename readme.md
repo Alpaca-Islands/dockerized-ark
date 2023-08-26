@@ -29,8 +29,9 @@ This starts the container witch updates/installs ark in c://arkserver it uses th
 |`ADMIN_PASSWORD`|test|
 |`MAX_PLAYERS`|10|
 |`RCON_ENABLED`|true (This should stay true because of the included rcon program)|
-|`EXTRA_STARTUPARGS`||
-`EXTRA_STARTUPARGS` starts empty, you can add any [startup commands](https://ark.fandom.com/wiki/Server_configuration#Command_line_arguments) to it :
+|`EXTRA_STARTUPARGS`|
+
+`EXTRA_STARTUPARGS` starts empty, you can add any [startup commands](https://ark.fandom.com/wiki/Server_configuration#Command_line_arguments) to it.
 ### Minimum RAM
 
 This server requires about 4096M to run with no players on a default map. Although it is recommended to run 6144M by the ARK creators, specific DLC maps will increase this requirement, such as Genesis 2 requiring over 13,440M to start.
